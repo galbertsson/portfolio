@@ -1,0 +1,19 @@
+#navigation{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    width: 100%;
+    overflow: hidden;
+}
+
+.nav-button{
+    color: white;
+    background: 0 0;
+    border: none;
+    padding: 0 16px;
+    font-family: "Roboto","Helvetica","Arial",sans-serif;
+    font-size: 14px;
+    text-transform: uppercase;
+    cursor: pointer;
+}

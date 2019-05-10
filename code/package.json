@@ -1,0 +1,28 @@
+{
+  "name": "portfoliofront",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@material-ui/core": "^3.9.1",
+    "@material-ui/icons": "^3.0.2",
+    "express": "^4.16.4",
+    "firebase": "^5.11.1",
+    "mongodb": "^3.2.3",
+    "npm": "^6.9.0",
+    "react": "^16.4.0",
+    "react-dom": "^16.4.0",
+    "react-router": "^4.3.1",
+    "react-router-dom": "^4.3.1",
+    "react-scripts": "1.1.4"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build & set NODE_ENV=production&node server.js",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "devDependencies": {
+    "firebase-tools": "^6.7.2"
+  },
+  "proxy": "http://localhost:5000/"
+}

@@ -1,0 +1,14 @@
+#education{
+    margin: 1vh;
+    text-align: center;
+}
+
+.courses{
+    margin: auto;
+    text-align: left;
+    width: 85vw;
+}
+
+.course{
+    text-align: left;
+}
