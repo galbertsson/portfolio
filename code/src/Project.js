@@ -36,7 +36,7 @@ class Project extends Component {
           <Grid spacing={24} style={{padding: 24}} container>
             {this.props.project && this.props.project.pictures.map(picURL => 
               <Grid key={picURL} item xs={12} md={this.state.widths[picURL]}>
-                <img id={picURL} style={{maxWidth:'100%', maxHeight:'100%', width: 'auto', height: 'auto'}} onLoad={this.onImageLoad} src={"/pictures/" + picURL} alt=""/>
+                <img id={picURL} style={{maxWidth:'100%', maxHeight:'100%', width: 'auto', height: 'auto'}} onLoad={this.onImageLoad} src={picURL} alt=""/>
               </Grid>)}
           </Grid>
 

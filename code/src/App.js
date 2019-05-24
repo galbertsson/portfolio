@@ -1,12 +1,6 @@
 import React, { Component } from 'react';
 import './css/App.css';
 
-import {
-  Route,
-  Switch,
-  Redirect
-} from 'react-router-dom'
-
 import Home from './Home';
 import * as firebase from 'firebase';
 
@@ -28,24 +22,12 @@ class App extends Component {
     app.database().ref("/projects").once("value").then((data) => {
       this.setState({projects: data.val()});
     })
-
-    /*fetch('/api/projects')
-    .then((response) => response.json())
-    .then((responseJson) => {
-      this.setState({projects: responseJson.projects});
-    })
-    .catch((error) => {
-      console.error(error);
-    });*/
   }
 
   render() {
     return (
       <div className="App">
-        <Switch>
-            <Route exact path="/" render={() => <Home projects={this.state.projects} />} />
-            <Redirect to="/" />
-        </Switch>
+        <Home projects={this.state.projects} />
       </div>
     );
   }

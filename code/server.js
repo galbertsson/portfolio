@@ -3,11 +3,11 @@ const path = require('path');
 const app = express();
 const port = process.env.NODE_ENV === "production" ? 80 : 5000;
 
-var MongoClient = require('mongodb').MongoClient;
+//var MongoClient = require('mongodb').MongoClient;
 
 app.use(express.static(path.join(__dirname, 'build')));
 
-app.get('/api/projects', (req, res) => {
+/*/api/projects', (req, res) => {
   MongoClient.connect("mongodb://127.0.0.1:27017/", {useNewUrlParser: true}, function(err, db) {
     if(!err) {
       var dbo = db.db("portfolio");
@@ -21,7 +21,7 @@ app.get('/api/projects', (req, res) => {
       res.send("");
     } 
   });
-});
+});*/
 
 app.use('/pictures',express.static('pictures'));
 

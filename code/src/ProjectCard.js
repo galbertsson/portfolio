@@ -69,7 +69,7 @@ class MediaCard extends Component {
         />
         <CardMedia
           className={classes.media}
-          image={'/pictures/' + this.props.project.pictures[0]}
+          image={this.props.project.pictures[0]}
         />
         <CardContent>
           <ExpansionPanel style={{boxShadow: "none", padding : 0}}>
@@ -84,7 +84,7 @@ class MediaCard extends Component {
                   </Grid>
                   {this.props.project.pictures.map(picURL => 
                     <Grid key={picURL} item xs={12} md={this.state.widths[picURL]}>
-                      <img id={picURL} style={{maxWidth:'100%', maxHeight:'100%', width: 'auto', height: 'auto'}} onLoad={this.onImageLoad} src={"/pictures/" + picURL} alt=""/>
+                      <img id={picURL} style={{maxWidth:'100%', maxHeight:'100%', width: 'auto', height: 'auto'}} onLoad={this.onImageLoad} src={picURL} alt=""/>
                     </Grid>
                   )}
               </Grid>
